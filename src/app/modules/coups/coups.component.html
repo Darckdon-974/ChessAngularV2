@@ -1,0 +1,32 @@
+<div>
+    <h1 class="mat-headline">Listes des coups</h1>
+    <div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
+        <div
+          [fxFlex]="(100/gridColumns) + '%'"
+          fxFlex.xs="100%"
+          fxFlex.sm="33%"
+          *ngFor="let coup of coups">
+          <mat-card class="mat-elevation-z4" >
+            <mat-card-header>
+                <div mat-card-avatar class="header-image"></div>
+                <mat-card-title>{{coup.name}}</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="{{coup.url}}">
+            <mat-card-content class="description">
+                <p>
+                {{coup.description}}
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-fab color="primary">
+                    <mat-icon>add</mat-icon>
+                </button>
+                <button mat-fab color="warn" (click)="delete(coup)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+    </div>
+</div>
+  
