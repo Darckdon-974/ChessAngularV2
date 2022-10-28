@@ -1,7 +1,3 @@
-# ChessAngularV2
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
-
 <!-- PROJECT LOGO -->
 <div align="center">
   <a href="https://github.com/Darckdon-974/ChessAngularV2.git">
