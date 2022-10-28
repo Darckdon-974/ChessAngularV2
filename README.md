@@ -102,7 +102,7 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 ODOUX Hugo - [@Darckdon](Darckdon#1955)
 
-Project Link: [@ChessWorld](hhttps://github.com/Darckdon-974/ChessAngularV2.git)
+Project Link: [@ChessWorld](https://github.com/Darckdon-974/ChessAngularV2.git)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
