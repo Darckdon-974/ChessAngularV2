@@ -115,7 +115,7 @@ Project Link: [ChessWorld](hhttps://github.com/Darckdon-974/ChessAngularV2.git)
 [contributors-url]: https://github.com/Darckdon-974/ChessAngularV2/graphs/contributors
 [Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
 [Angular-url]: https://angular.io/
-[material.angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
+[material.angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=material&logoColor=white
 [AnuglarMaterial-url]: https://material.angular.io/
 [product-screenshot]: Documentation/images/app.png
 https://github.com/Darckdon-974/ChessAngularV2.git
