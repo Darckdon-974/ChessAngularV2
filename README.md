@@ -1,3 +1,5 @@
+[![Contributors][contributors-shield]][contributors-url]
+
 <!-- PROJECT LOGO -->
 <div align="center">
   <a href="https://github.com/Darckdon-974/ChessAngularV2.git">
@@ -41,9 +43,11 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](/Documentation/images/app.png)
+[![ChessWord app][product-screenshot]](/Documentation/images/app.png)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
+This is an application about chess, build with [Angular CLI](https://github.com/angular/angular) and Angular material for angular ui. 
+We use a specific architecture for angular (look at [Documentation](/Documentation/Folder_Architecture_front/Folder_Architecture.PNG)). 
+In this project, we will build an application with Angular and the best configuration for Angular framework.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -53,7 +57,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 This application was built with :
 
 * [![Angular][Angular.io]][Angular-url]
-* [![Material][material.angular.io]][material-url]
+* [![Material][material.angular.io]][AnuglarMaterial-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -103,3 +107,15 @@ Your Name - [@Darckdon](Darckdon#1955)
 Project Link: [ChessWorld](hhttps://github.com/Darckdon-974/ChessAngularV2.git)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
+[contributors-url]: https://github.com/Darckdon-974/ChessAngularV2/graphs/contributors
+[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
+[Angular-url]: https://angular.io/
+[material.angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
+[AnuglarMaterial-url]: https://material.angular.io/
+[product-screenshot]: Documentation/images/app.png
+https://github.com/Darckdon-974/ChessAngularV2.git
