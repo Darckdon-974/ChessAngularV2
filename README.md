@@ -4,7 +4,7 @@
     <img src="Documentation/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">ChessWord</h3>
+  <h3 align="center">ChessWorld</h3>
 
   <p align="center">
     An awesome Chess application!
@@ -41,9 +41,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
+[![Product Name Screen Shot][product-screenshot]](/Documentation/images/app.png)
 
-<img src="Documentation/images/app.png" alt="Logo" width="80" height="80">
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -98,8 +98,8 @@ Use this space to show useful examples of how a project can be used. Additional 
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Your Name - [@Darckdon](Darckdon#1955)
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [ChessWorld](hhttps://github.com/Darckdon-974/ChessAngularV2.git)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
