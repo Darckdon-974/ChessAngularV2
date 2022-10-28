@@ -45,6 +45,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
+
 <img src="Documentation/images/app.png" alt="Logo" width="80" height="80">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
