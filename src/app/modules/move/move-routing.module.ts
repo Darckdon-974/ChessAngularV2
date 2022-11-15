@@ -1,22 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { CoupsComponent } from './coups.component';
+import { MovesListComponent } from './moves-list/moves-list.component';
+
 
 const routes: Routes = [
   {
     path: '',
-    component: CoupsComponent,
-    pathMatch: 'full',
-  },
+    component: MovesListComponent,
+    pathMatch: 'full'
+  }
 ]
 
 @NgModule({
+  declarations: [],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
   ],
-  exports: [RouterModule]
-
+  exports: [
+    RouterModule
+  ]
 })
-export class CoupsRoutingModule { }
+export class MoveRoutingModule { }

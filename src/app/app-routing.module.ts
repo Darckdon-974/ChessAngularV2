@@ -19,14 +19,18 @@ const routes: Routes = [
       },
       {
         path: 'list',
-        loadChildren: () => import('./modules/coups/coups.module').then(m =>m.CoupsModule)
+        loadChildren: () => import('./modules/move/move.module').then(m =>m.MoveModule)
       },
     ]
   },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(routes)
+  ],
+  exports: [
+    RouterModule
+  ]
 })
 export class AppRoutingModule { }

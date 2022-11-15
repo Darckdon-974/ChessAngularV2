@@ -5,23 +5,23 @@
           [fxFlex]="(100/gridColumns) + '%'"
           fxFlex.xs="100%"
           fxFlex.sm="33%"
-          *ngFor="let coup of coups">
+          *ngFor="let move of moves">
           <mat-card class="mat-elevation-z4" >
             <mat-card-header>
                 <div mat-card-avatar class="header-image"></div>
-                <mat-card-title>{{coup.name}}</mat-card-title>
+                <mat-card-title>{{move.name}}</mat-card-title>
             </mat-card-header>
-            <img mat-card-image src="{{coup.url}}">
+            <img mat-card-image src="{{move.url}}">
             <mat-card-content class="description">
                 <p>
-                {{coup.description}}
+                {{move.description}}
                 </p>
             </mat-card-content>
             <mat-card-actions>
-                <button mat-fab color="primary" (click)="openDialog(coup)">
+                <button mat-fab color="primary" (click)="openMoveDetailForUpdate(move)">
                     <mat-icon>add</mat-icon>
                 </button>
-                <button mat-fab color="warn" (click)="delete(coup)">
+                <button mat-fab color="warn" (click)="delete(move.id)">
                     <mat-icon>delete</mat-icon>
                 </button>
             </mat-card-actions>
@@ -29,4 +29,3 @@
         </div>
     </div>
 </div>
-  

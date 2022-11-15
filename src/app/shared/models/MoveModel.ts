@@ -1,4 +1,4 @@
-export class Coup {
+export class Move {
     id: number;
     name: string;
     description: string;

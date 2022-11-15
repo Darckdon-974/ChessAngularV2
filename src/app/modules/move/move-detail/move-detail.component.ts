@@ -1,7 +1,8 @@
-import { Component, Inject, OnInit, ViewChild } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material/dialog";
-import { Coup } from 'src/app/shared/models/CoupModel';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Move } from 'src/app/shared/models/MoveModel';
+// Import for use  Angular Material
+import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material/dialog";
 
 @Component({
   selector: 'app-move-detail',
@@ -10,9 +11,9 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class MoveDetailComponent implements OnInit {
 
-  move: Coup;
+  move: Move;
   moveForm = new FormGroup({
-    id: new FormControl(),
+    id: new FormControl(0),
     name: new FormControl('',[Validators.required]),
     description: new FormControl('',[Validators.required, Validators.minLength(10)]),
     url: new FormControl('',[Validators.required, Validators.minLength(10)])
@@ -20,12 +21,12 @@ export class MoveDetailComponent implements OnInit {
 
   constructor(
     private dialogRef: MatDialogRef<MoveDetailComponent>,
-    @Inject(MAT_DIALOG_DATA) data: Coup) {
-      this.move = data;
+    @Inject(MAT_DIALOG_DATA) data: Move,
+  ) { 
+    this.move = data;
   }
 
-
-  ngOnInit() {
+  ngOnInit(): void {
     this.moveForm.setValue({
       id: this.move.id,
       name: this.move.name,
@@ -35,7 +36,7 @@ export class MoveDetailComponent implements OnInit {
   }
 
   save(){
-    if (this.moveForm.invalid) {
+    if (this.moveForm.invalid){
       return;
     }
     this.dialogRef.close(this.moveForm.value);
