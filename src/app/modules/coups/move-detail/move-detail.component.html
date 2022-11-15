@@ -1,0 +1,25 @@
+<h2 mat-dialog-title>{{move.name}}</h2>
+<mat-dialog-content class="form" [formGroup]="moveForm">
+  <mat-form-field appearance="fill">
+    <mat-label for="name">Nom du mouvement</mat-label>
+      <input matInput formControlName="name">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>description</mat-label>
+    <textarea matInput cdkTextareaAutosize
+      cdkAutosizeMinRows="5"
+      #autosize="cdkTextareaAutosize"
+      formControlName="description"></textarea>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>URL</mat-label>
+    <textarea matInput cdkTextareaAutosize
+      cdkAutosizeMinRows="5"
+      #autosize="cdkTextareaAutosize"
+      formControlName="url"></textarea>
+  </mat-form-field>
+</mat-dialog-content>
+<div mat-dialog-actions>
+  <button mat-button (click)="close()">Close</button>
+  <button mat-button (click)="save()" >Save</button>
+</div>

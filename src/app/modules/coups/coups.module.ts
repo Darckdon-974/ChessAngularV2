@@ -6,12 +6,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CoupsRoutingModule } from './coups-routing.module';
-
+import { MoveDetailComponent } from './move-detail/move-detail.component';
+import { MatDialogModule } from "@angular/material/dialog";
+import { MatInputModule } from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
-    CoupsComponent
+    CoupsComponent,
+    MoveDetailComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +24,9 @@ import { CoupsRoutingModule } from './coups-routing.module';
     MatIconModule,
     FlexLayoutModule,
     CoupsRoutingModule,
-
+    MatDialogModule,
+    MatInputModule,
+    ReactiveFormsModule,
   ],
   exports: [
     CoupsComponent

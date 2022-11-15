@@ -9,7 +9,7 @@ import { MessageService } from './message.service';
   providedIn: 'root'
 })
 export class CoupService {
-  private coupsUrl = 'api/coups'; // URL to web API
+  private movesUrl = 'api/coups'; // URL to web API
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -22,17 +22,25 @@ export class CoupService {
 
 
   // Get coups from the server
-  getCoups(): Observable<Coup[]> {
-    return this.http.get<Coup[]>(this.coupsUrl)
+  getMoves(): Observable<Coup[]> {
+    return this.http.get<Coup[]>(this.movesUrl)
     .pipe(
       tap(_ => this.log('fetched coups')),
       catchError(this.handleError<Coup[]>('getCoups', []))
     );
   }
 
+  /**Put: Update the move on the server */
+  updateMove(move: Coup): Observable<any> {
+    return this.http.put(this.movesUrl, move, this.httpOptions).pipe(
+      tap(_=> this.log(`udated move id=${move.id}`)),
+      catchError(this.handleError<Coup>('udateMove'))
+    )
+  }
+
   /** DELETE: delete the hero from the server */
-  deleteManga(id: number): Observable<Coup> {
-    const url = `${this.coupsUrl}`;
+  deleteMove(id: number): Observable<Coup> {
+    const url = `${this.movesUrl}`;
     return this.http.delete<Coup>(url, this.httpOptions).pipe(
       tap(_=> this.log(`deleted manga id=${id}`)),
       catchError(this.handleError<Coup>('deleteManga'))
@@ -57,7 +65,7 @@ export class CoupService {
     };
   }
 
-  // Log a HeroService message with the MessageService
+  // Log a MoveService message with the MessageService
   private log(message: string) {
     this.messageService.add(`MangaService: ${message}`);
   }

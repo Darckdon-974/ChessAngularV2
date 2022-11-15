@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CoupDetailComponent } from './coup-detail.component';
+import { MoveDetailComponent } from './move-detail.component';
 
-describe('CoupDetailComponent', () => {
-  let component: CoupDetailComponent;
-  let fixture: ComponentFixture<CoupDetailComponent>;
+describe('MoveDetailComponent', () => {
+  let component: MoveDetailComponent;
+  let fixture: ComponentFixture<MoveDetailComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CoupDetailComponent ]
+      declarations: [ MoveDetailComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CoupDetailComponent);
+    fixture = TestBed.createComponent(MoveDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -11,7 +11,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { FormsModule } from '@angular/forms';
-import { CoupDetailModule } from './modules/coup-detail/coup-detail.module';
 import { HomeModule } from './modules/home/home.module';
 
 @NgModule({
@@ -26,7 +25,6 @@ import { HomeModule } from './modules/home/home.module';
     CoreModule,
     CoupsModule,
     HomeModule,
-    CoupDetailModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
