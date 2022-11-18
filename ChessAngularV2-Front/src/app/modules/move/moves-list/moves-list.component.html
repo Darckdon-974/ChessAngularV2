@@ -1,0 +1,39 @@
+<div>
+    <h1 class="mat-headline">Listes des coups</h1>
+    <div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
+        <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%">
+            <mat-card (click)="openMoveDetailForAdd()" class="mat-elevation-z4 product">
+                <div class="add-move">+<br/>Ajouter un mouvement</div>
+            </mat-card>
+        </div>
+        <div
+          [fxFlex]="(100/gridColumns) + '%'"
+          fxFlex.xs="100%"
+          fxFlex.sm="33%"
+          *ngFor="let move of moves">
+            <mat-card class="mat-elevation-z4">
+                <mat-card-header>
+                    <div mat-card-avatar class="header-image"></div>
+                    <mat-card-title>{{move.name}}</mat-card-title>
+                </mat-card-header>
+                <img mat-card-image src="{{move.url}}">
+                <mat-card-content class="description">
+                    <p>
+                    {{move.description}}
+                    </p>
+                </mat-card-content>
+                <mat-card-actions align="end">
+                    <button mat-fab color="primary">
+                        <mat-icon>book</mat-icon>
+                    </button>
+                    <button mat-fab color="primary" (click)="openMoveDetailForUpdate(move)">
+                        <mat-icon>border_color</mat-icon>
+                    </button>
+                    <button mat-fab color="warn" (click)="delete(move.id)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>

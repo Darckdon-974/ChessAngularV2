@@ -1,0 +1,36 @@
+.description {
+    background-color: #f3f3f3;
+    border: solid 5px #f3f3f3;
+    border-radius: 5px;
+    height: 100px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
+}
+
+.description::-webkit-scrollbar {
+    display: none;
+}
+
+.mat-headline {
+    text-align: center;
+    margin: 25px;  
+}
+
+.product{
+    min-width: 180px;
+    min-height: 558.75px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 25px;
+    margin: auto;
+}
+
+.add-move {
+    background-color: rgb(223, 223, 223);
+    border: 2px solid rgb(223, 223, 223);
+    border-radius: 5px;
+    padding: 10px;
+    padding-top: 220px;
+    padding-bottom: 220px;
+}
