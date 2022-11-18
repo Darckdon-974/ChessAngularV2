@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <div align="center">
   <a href="https://github.com/Darckdon-974/ChessAngularV2.git">
-    <img src="Documentation/images/logo.png" alt="Logo" width="80" height="80">
+    <img src="/ChessAngularV2-Front/Documentation/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">ChessWorld</h3>
