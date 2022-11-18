@@ -41,7 +41,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![ChessWord app][product-screenshot]](/ChessAngularV2-Front/Documentation/images/logo.png)
+[![ChessWord app][product-screenshot]](/ChessAngularV2-Front/Documentation/images/app.png)
 
 This is an application about chess, build with [Angular CLI](https://github.com/angular/angular) and Angular material for angular ui. 
 We use a specific architecture for angular (look at [Documentation](/Documentation/Folder_Architecture_front/Folder_Architecture.PNG)). 
@@ -113,5 +113,5 @@ Project Link: [@ChessWorld](https://github.com/Darckdon-974/ChessAngularV2.git)
 [Angular-url]: https://angular.io/
 [material.angular.io]: https://img.shields.io/badge/Material-DD0031?style=for-the-badge&logo=angular&logoColor=white
 [AnuglarMaterial-url]: https://material.angular.io/
-[product-screenshot]: /ChessAngularV2-Front/Documentation/images/logo.png
+[product-screenshot]: /ChessAngularV2-Front/Documentation/images/app.png
 https://github.com/Darckdon-974/ChessAngularV2.git
