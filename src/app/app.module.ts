@@ -19,9 +19,9 @@ import { MoveModule } from './modules/move/move.module';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
     CoreModule,
     HomeModule,
     MoveModule,

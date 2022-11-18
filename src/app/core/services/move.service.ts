@@ -26,6 +26,11 @@ export class MoveService {
     return this.http.get<Move[]>(this.movesUrl);
   }
 
+  // Add moves to the database
+  addMove(move : Move) : Observable<Move> {
+    return this.http.post<Move>(this.movesUrl, move, this.httpOtions);
+  }
+
   // Put move from the database
   updateMove(move : Move) : Observable<Move>{
     return this.http.put<Move>(this.movesUrl, move, this.httpOtions);
@@ -33,6 +38,7 @@ export class MoveService {
 
   // DELETE move from the database
   deleteMove(id : number){
-    return this.http.delete(this.movesUrl, this.httpOtions);
+    const url = `${this.movesUrl}/${id}}`;
+    return this.http.delete(url, this.httpOtions);
   }
 }

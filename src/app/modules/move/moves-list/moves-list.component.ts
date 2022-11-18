@@ -28,6 +28,26 @@ export class MovesListComponent implements OnInit {
     this.moveService.getMoves().subscribe(data => this.moves = data);
   }
 
+  openMoveDetailForAdd(){
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    dialogConfig.data = {
+      id: 0,
+      name: "",
+      description: "",
+      url: ""
+    }
+    const dialogRef = this.dialog.open(MoveDetailComponent, dialogConfig);
+    dialogRef.afterClosed().subscribe(
+      (data) => {
+        if (data!=null) {
+          this.moveService.addMove(data).subscribe(()=>this.load());
+        }
+      }
+    );
+  }
+
   openMoveDetailForUpdate(move: Move) {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true;
@@ -49,6 +69,6 @@ export class MovesListComponent implements OnInit {
   }
 
   delete(moveId: number): void {
-    this.moveService.deleteMove(moveId).subscribe();
+    this.moveService.deleteMove(moveId).subscribe(()=>this.load());
   }
 }
