@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-import { Coup } from './shared/models/CoupModel';
+import { Move } from './shared/models/MoveModel';
 
 @Injectable({
   providedIn: 'root'
 })
 export class InMemoryDataService implements InMemoryDbService {
   createDb () {
-    const coups = [
+    const moves = [
       { id: 1, name : 'Le petit roque', description: 'Le roque consiste à déplacer votre roi de deux cases vers la tour. Ensuite, vous devez faire passer cette dernière à côté du roi. Il existe deux types de roques' , url : "data:image/png;base64,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" },
       { id: 2, name : 'La prise en passant', description: 'Il s’agit d’un coup de pion réalisable lorsqu’un pion blanc se trouve à la 5e rangée, tandis que le pion noir à la 4e rangée. Le pion adverse se déplace de deux cases parce qu’il n’a pas encore bougé.', url: "https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/pdrpnht/php8nbVYg.gif" },
       { id: 3, name : 'La promotion', description: 'Ce coup spécial consiste à échanger un pion contre une tour, une dame, un fou ou un cavalier', url: "https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/pdrpnht/phpXp9sOu.gif" },
@@ -17,10 +17,10 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 7, name : 'Le mat arabe', description: 'Ce coup est réalisé à partir d’une Tour et d’un Cavalier. Dans cette situation, le Roi noir ne peut plus fuir, puisqu’ils ne peuvent pas prendre la Tour blanche sans passer par le Cavalier.', url: "https://echecs-attitude.fr/img/cms/mat-des-arabes.jpg" },
       { id: 8, name : 'Le mat de Blackburne', description: 'Ce mat arrive lorsque le Fou met en échec le Roi tout en étant protégé par le Cavalier. De son côté, le Roi noir ne peut pas s’enfuir, puisqu’il sera attaqué par les Fous en g7 ou en h8.', url: "http://www.echecspourtous.com/Images/images_tableaux_de_mat/animation_mat_de_blackburne.gif" },
     ];
-    return {coups};
+    return {moves};
   }
-
-  genId(coups: Coup[]) : number {
-    return coups.length > 0 ? Math.max(...coups.map(coup => coup.id)) +1 : 11;
+  
+  genId(moves: Move[]): number {
+    return moves.length > 0 ? Math.max(...moves.map(move=>move.id)) +1 : 11;
   }
 }
