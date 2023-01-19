@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { Move } from 'src/app/shared/models/MoveModel';
+import { Move } from '../../../../../../shared/models/MoveModel';
 // Import for use  Angular Material
 import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material/dialog";
 
