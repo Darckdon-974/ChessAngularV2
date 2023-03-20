@@ -1,26 +1,34 @@
+/* eslint-disable prettier/prettier */
 import { Injectable } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
+import { InsertResult, Repository } from 'typeorm';
 import { CreateMoveDto } from './dto/create-move.dto';
 import { UpdateMoveDto } from './dto/update-move.dto';
+import { Move } from './entities/move/move.entity';
 
 @Injectable()
 export class MoveService {
-  create(createMoveDto: CreateMoveDto) {
-    return 'This action adds a new move';
+  constructor(
+    @InjectRepository(Move) private readonly moveRepository: Repository<Move>
+  ){}
+  
+  async create(createMoveDto: CreateMoveDto): Promise<InsertResult> {
+    return await this.moveRepository.insert(createMoveDto);
   }
 
-  findAll() {
-    return `This action returns all move`;
+  async findAll() {
+    return await this.moveRepository.find();
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} move`;
+  async findOne(id: number) {
+    return await this.moveRepository.findOneBy({id: id});
   }
 
-  update(id: number, updateMoveDto: UpdateMoveDto) {
-    return `This action updates a #${id} move`;
+  async update(id: number, updateMoveDto: UpdateMoveDto) {
+    return await this.moveRepository.update(id, updateMoveDto);
   }
 
   remove(id: number) {
-    return `This action removes a #${id} move`;
+    return this.moveRepository.delete(id);
   }
 }

@@ -1,16 +1,6 @@
+/* eslint-disable prettier/prettier */
 import 'reflect-metadata';
 import { DataSource } from 'typeorm';
+import { dbProperties } from './properties/db.properties';
 
-export const AppDataSource = new DataSource({
-  type: 'mysql',
-  host: 'localhost',
-  port: 3306,
-  username: 'root',
-  password: 'root',
-  database: 'chess',
-  synchronize: true,
-  logging: false,
-  entities: [],
-  migrations: [],
-  subscribers: [],
-});
+export const AppDataSource = new DataSource({...dbProperties});

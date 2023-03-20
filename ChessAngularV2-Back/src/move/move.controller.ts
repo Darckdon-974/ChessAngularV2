@@ -25,18 +25,18 @@ export class MoveController {
     return this.moveService.findAll();
   }
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
+  @Get('/:id')
+  findOne(@Param('id') id: number) {
     return this.moveService.findOne(+id);
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateMoveDto: UpdateMoveDto) {
+  update(@Param('id') id: number, @Body() updateMoveDto: UpdateMoveDto) {
     return this.moveService.update(+id, updateMoveDto);
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
+  remove(@Param('id') id: number) {
     return this.moveService.remove(+id);
   }
 }

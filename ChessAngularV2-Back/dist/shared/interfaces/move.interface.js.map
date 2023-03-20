@@ -1,1 +1,0 @@
-{"version":3,"file":"move.interface.js","sourceRoot":"","sources":["../../../../shared/interfaces/move.interface.ts"],"names":[],"mappings":";;;AAOA,MAAa,IAAI;IAMb,YAAY,EAAU,EAAE,IAAY,EAAE,WAAmB,EAAE,GAAW;QAClE,IAAI,CAAC,EAAE,GAAG,EAAE,CAAC;QACb,IAAI,CAAC,IAAI,GAAG,IAAI,CAAC;QACjB,IAAI,CAAC,WAAW,GAAG,WAAW,CAAC;QAC/B,IAAI,CAAC,GAAG,GAAG,GAAG,CAAC;IACnB,CAAC;CACJ;AAZD,oBAYC"}
