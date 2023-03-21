@@ -1,9 +1,15 @@
+/* eslint-disable prettier/prettier */
 import { Module } from '@nestjs/common';
+import { TypeOrmModule } from '@nestjs/typeorm'
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { MoveModule } from './move/move.module';
+import { dbProperties } from './properties/db.properties';
+import { AuthModule } from './auth/auth.module';
+import { UserModule } from './user/user.module';
 
 @Module({
-  imports: [],
+  imports: [TypeOrmModule.forRoot({...dbProperties}), MoveModule, AuthModule, UserModule],
   controllers: [AppController],
   providers: [AppService],
 })
