@@ -10,8 +10,11 @@ import {
 import { MoveService } from './move.service';
 import { CreateMoveDto } from './dto/create-move.dto';
 import { UpdateMoveDto } from './dto/update-move.dto';
+import { UseGuards } from '@nestjs/common/decorators/core/use-guards.decorator';
+import { AuthGuard } from '../auth/auth.guard';
 
 @Controller('move')
+@UseGuards(AuthGuard)
 export class MoveController {
   constructor(private readonly moveService: MoveService) {}
 
@@ -30,12 +33,12 @@ export class MoveController {
     return this.moveService.findOne(+id);
   }
 
-  @Patch(':id')
+  @Patch('/:id')
   update(@Param('id') id: number, @Body() updateMoveDto: UpdateMoveDto) {
     return this.moveService.update(+id, updateMoveDto);
   }
 
-  @Delete(':id')
+  @Delete('/:id')
   remove(@Param('id') id: number) {
     return this.moveService.remove(+id);
   }
