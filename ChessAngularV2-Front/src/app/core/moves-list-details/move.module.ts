@@ -7,11 +7,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MovesListComponent } from './moves-list/moves-list.component';
 
 // Import for use  Angular Material
-import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialogModule, MatDialogRef,  MAT_DIALOG_DATA, } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
+import {MatTabsModule} from '@angular/material/tabs';
+
 
 
 
@@ -30,6 +32,9 @@ import { MatCardModule } from '@angular/material/card';
     MatDialogModule,
     MatInputModule,
     ReactiveFormsModule,
+    MatTabsModule
+    
+    
   ],
   exports: [
     MoveDetailComponent,

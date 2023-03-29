@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { MoveService } from 'src/app/core/services/move.service';
 import { Move } from '../../../../../../shared/interfaces/move.interface';
-import { MoveDetailComponent } from './../move-detail/move-detail.component';
+import { MoveDetailComponent } from '../../../core/moves-list-details/move-detail/move-detail.component';
 import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
+import { MoveService } from '../../services/move.service';
 
 
 @Component({
@@ -14,6 +14,7 @@ export class MovesListComponent implements OnInit {
 
   gridColumns: number = 4;
   moves: Move[] = [];
+  public lotsOfTabs!: string[];
 
   constructor(
     private moveService: MoveService,
@@ -22,6 +23,7 @@ export class MovesListComponent implements OnInit {
 
   ngOnInit(): void {
     this.load();
+     this.lotsOfTabs = new Array(30).fill(0).map((_, index) => `coups ${index}`);
   }
 
   load(): void {

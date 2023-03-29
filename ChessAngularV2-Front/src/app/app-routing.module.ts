@@ -15,12 +15,9 @@ const routes: Routes = [
       },
       {
         path: 'home',
-        loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule),
+        loadChildren: () => import('./core/home/home.module').then(m => m.HomeModule),
       },
-      {
-        path: 'list',
-        loadChildren: () => import('./modules/move/move.module').then(m =>m.MoveModule)
-      },
+      
     ]
   },
 ];
