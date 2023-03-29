@@ -1,10 +1,10 @@
 /* eslint-disable prettier/prettier */
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { InsertResult, Repository } from 'typeorm';
+import { InsertResult, Repository, UpdateResult } from 'typeorm';
 import { CreateMoveDto } from './dto/create-move.dto';
 import { UpdateMoveDto } from './dto/update-move.dto';
-import { Move } from './entities/move/move.entity';
+import { Move } from './entity/move/move.entity';
 
 @Injectable()
 export class MoveService {
@@ -16,15 +16,15 @@ export class MoveService {
     return await this.moveRepository.insert(createMoveDto);
   }
 
-  async findAll() {
+  async findAll(): Promise<Move[]> {
     return await this.moveRepository.find();
   }
 
-  async findOne(id: number) {
+  async findOne(id: number): Promise<Move> {
     return await this.moveRepository.findOneBy({id: id});
   }
 
-  async update(id: number, updateMoveDto: UpdateMoveDto) {
+  async update(id: number, updateMoveDto: UpdateMoveDto): Promise<UpdateResult> {
     return await this.moveRepository.update(id, updateMoveDto);
   }
 

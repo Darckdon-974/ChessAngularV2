@@ -1,50 +1,42 @@
-/* eslint-disable prettier/prettier */
-import {
-    MigrationInterface,
-    QueryRunner,
-    Table,
-    TableColumn,
-} from "typeorm"
+import { MigrationInterface, QueryRunner, Table } from 'typeorm';
 
 export class InitMoveTable1679329457081 implements MigrationInterface {
-    name='InitMoveTable1679329457081';
+  name = 'InitMoveTable1679329457081';
 
-    public async up(queryRunner: QueryRunner): Promise<void> {
-        await queryRunner.createTable(
-            new Table({
-                name: 'move',
-                columns: [
-                    new TableColumn({
-                        type: 'int',
-                        name: 'id',
-                        isGenerated: true,
-                        isPrimary: true,
-                        generationStrategy: "increment",
-                        isNullable: false
-                    }),
-                    new TableColumn({
-                        type: 'varchar',
-                        length: '30',
-                        name: 'name',
-                        isNullable: false
-                    }),
-                    new TableColumn({
-                        type: 'text',
-                        name: 'description',
-                        isNullable: true
-                    }),
-                    new TableColumn({
-                        type: 'text',
-                        name: 'url',
-                        isNullable: true
-                    })
-                ]
-            })
-        )
-    }
+  public async up(queryRunner: QueryRunner): Promise<void> {
+    await queryRunner.createTable(
+      new Table({
+        name: 'move',
+        columns: [
+          {
+            name: 'id',
+            type: 'int',
+            isGenerated: true,
+            generationStrategy: 'increment',
+            isPrimary: true,
+          },
+          {
+            name: 'name',
+            type: 'varchar',
+            length: '30',
+            isNullable: false,
+          },
+          {
+            name: 'description',
+            type: 'text',
+            isNullable: true,
+          },
+          {
+            name: 'url',
+            type: 'text',
+            isNullable: true,
+          },
+        ],
+      }),
+    );
+  }
 
-    public async down(queryRunner: QueryRunner): Promise<void> {
-        await queryRunner.dropTable('chess')
-    }
-
+  public async down(queryRunner: QueryRunner): Promise<void> {
+    await queryRunner.dropTable('move');
+  }
 }

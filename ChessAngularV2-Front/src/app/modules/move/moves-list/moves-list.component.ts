@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MoveService } from 'src/app/core/services/move.service';
-import { Move } from '../../../../../../shared/interfaces/move.interface';
+import { Move } from 'src/app/shared/entities/move.entity';
 import { MoveDetailComponent } from './../move-detail/move-detail.component';
 import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
 

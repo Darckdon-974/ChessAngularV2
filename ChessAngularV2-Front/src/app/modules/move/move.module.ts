@@ -23,10 +23,10 @@ import { MatCardModule } from '@angular/material/card';
   imports: [
     CommonModule,
     MoveRoutingModule,
+    FlexLayoutModule,
     MatCardModule,
     MatButtonModule,
     MatIconModule,
-    FlexLayoutModule,
     MatDialogModule,
     MatInputModule,
     ReactiveFormsModule,
