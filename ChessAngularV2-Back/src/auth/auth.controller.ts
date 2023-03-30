@@ -1,17 +1,18 @@
 /* eslint-disable prettier/prettier */
-import { Controller } from '@nestjs/common';
-import { UseGuards } from '@nestjs/common/decorators/core/use-guards.decorator';
-import { Post } from '@nestjs/common/decorators/http/request-mapping.decorator';
-import { Body } from '@nestjs/common/decorators/http/route-params.decorator';
+import { Body, Controller, Post, UseGuards } from '@nestjs/common';
+import { AuthGuard } from '@nestjs/passport';
 import { AuthService } from './auth.service';
 
 @Controller('auth')
 export class AuthController {
     constructor(private authService: AuthService) {}
 
-    @UseGuards()
+    @UseGuards(AuthGuard('local'))
     @Post()
-    async login(@Body() user) {
-        return await this.authService.login(user)
+    async login(
+        @Body('username') login: string,
+        @Body('password') password: string,
+    ) {
+        return await this.authService.login({ username: login, password: password })
     }
 }
