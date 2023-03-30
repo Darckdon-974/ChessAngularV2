@@ -6,15 +6,15 @@ import {
   Patch,
   Param,
   Delete,
+  UseGuards,
 } from '@nestjs/common';
 import { MoveService } from './move.service';
 import { CreateMoveDto } from './dto/create-move.dto';
 import { UpdateMoveDto } from './dto/update-move.dto';
-import { UseGuards } from '@nestjs/common/decorators/core/use-guards.decorator';
-import { AuthGuard } from '../auth/auth.guard';
+import { AuthGuard } from '@nestjs/passport';
 
 @Controller('move')
-@UseGuards(AuthGuard)
+//@UseGuards(AuthGuard('jwt'))
 export class MoveController {
   constructor(private readonly moveService: MoveService) {}
 
