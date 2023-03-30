@@ -14,6 +14,9 @@ import { MovesListComponent } from './moves-list-details/moves-list/moves-list.c
 import { MoveDetailComponent } from './moves-list-details/move-detail/move-detail.component';
 import { MatDialogModule, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MoveModule } from './moves-list-details/move.module';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './interceptor/auth.interceptor';
+import { AuthService } from './services/auth.service';
 
 
 
@@ -33,13 +36,19 @@ import { MoveModule } from './moves-list-details/move.module';
         FooterComponent,
         WelcolmComponent,
     ],
-    providers: [MovesListComponent, MoveDetailComponent, MatDialogModule, {
+    providers: [MovesListComponent, MoveDetailComponent, MatDialogModule, AuthService, {
             provide: MatDialogRef,
             useValue: []
         }, {
             provide: MAT_DIALOG_DATA,
             useValue: []
         },
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: AuthInterceptor,
+            multi: true
+          }
+
         ],
     imports: [
         CommonModule,

@@ -7,7 +7,7 @@ const routes: Routes = [
   {
     path: '',
     component:LoggedInLayoutComponent,
-    canActivate: [AuthGuard],
+    // canActivate: [AuthGuard],
     children : [
       {
         path: '', 
@@ -18,6 +18,7 @@ const routes: Routes = [
         path: 'home',
         loadChildren: () => import('./core/home/home.module').then(m => m.HomeModule),
       },
+
       
     ]
   },

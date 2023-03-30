@@ -17,10 +17,21 @@ export class ConectComponent implements OnInit {
   }
 
   isConected(){
+
+    // appel au back 
+
+    // si is réponse guard ok 
+    // alors : 
     this.isItConected.emit(true);
     this.itIsConnected = true;
+
+    // réponse guard Nok alors  this.isItConected.emit(false);
   }
   isUnConected(){
+
+    // appel de déconection 
+    // demande de réponse 
+    // même shéma si réponse ok -> false --Si réponse NOK --> Message d'erreur 
     this.isItConected.emit(false);
     this.itIsConnected = false;
   }
