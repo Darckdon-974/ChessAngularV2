@@ -2,10 +2,10 @@
 export const dbProperties:any = {
     type: 'mysql',
     host: 'localhost',
-    port: 3306,
+    port: 3308,
     username: 'root',
-    password: 'root',
-    database: 'chess',
+    password: '',
+    database: 'chestangularv2',
     synchronize: true,
     logging: false,
     entities: ['src/move/entities/**/*.entity{.ts,.js}'],
