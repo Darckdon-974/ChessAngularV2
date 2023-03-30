@@ -1,10 +1,10 @@
 /* eslint-disable prettier/prettier */
 import { IUser } from "@shared/user.interface";
-import { Column, Entity, PrimaryColumn } from 'typeorm';
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity('user')
 export class User implements IUser {
-    @PrimaryColumn()
+    @PrimaryGeneratedColumn()
     id: number;
 
     @Column()

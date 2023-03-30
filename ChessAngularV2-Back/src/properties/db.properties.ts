@@ -8,8 +8,8 @@ export const dbProperties:any = {
     database: 'chestangularv2',
     synchronize: true,
     logging: false,
-    entities: ['src/move/entities/**/*.entity.ts'],
-    migrations: ['src/migrations/*.ts'],
+    entities: ['src/move/entities/**/*.entity{.ts,.js}'],
+    migrations: ['src/migrations/*{.ts,.js}'],
     subscribers: ['src/**/**.subsciber{.ts,.js}'],
     cli: {
         entitiesDir: 'src/move/entities',

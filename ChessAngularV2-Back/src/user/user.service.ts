@@ -11,7 +11,7 @@ export class UserService {
     ){}
 
     async createUser(login: string, password: string) {
-        return this.userRepository.insert({ username: login, password: password });
+        return this.userRepository.save({ username: login, password: password });
     }
 
     async getUser(login: string, password: string) {
