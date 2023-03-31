@@ -10,7 +10,7 @@ export class AuthService {
     ) {}
 
     login(username: string | null, password: string | null) {
-        return this.http.post<{access_token: string}>(environment.backendUrl + '/auth', {username, password})
+        return this.http.post<{access_token: string}>(environment.backendUrl + '/auth', {username, password});
     }
 
     setSession(authToken: string) {
@@ -31,5 +31,9 @@ export class AuthService {
     getExpiration(): number {
         const expiration = localStorage.getItem('expires_at') ?? '0';
         return Number.parseInt(expiration);
+    }
+
+    register(username: string | null, password: string | null) {
+        return this.http.post(environment.backendUrl + '/user', {username, password});
     }
 }
