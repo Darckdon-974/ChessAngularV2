@@ -5,13 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { InMemoryDataService } from './in-memory-data.service';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-
+import { FormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { AuthInterceptor } from './core/interceptor/auth.interceptor';
 
@@ -29,9 +25,6 @@ import { AuthInterceptor } from './core/interceptor/auth.interceptor';
     FormsModule,
     CoreModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    )
   ],
 
   // providers: [{

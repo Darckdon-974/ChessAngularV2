@@ -1,7 +1,5 @@
 <div class="Welcolm">
-
-    <div *ngIf="!isConected && !subscriptionForm">
-    
+  <div *ngIf="!isConected && !subscriptionForm">  
     <span class="textContent">"Lorem ipsum dolor sit amet, 
     consectetur adipiscing elit, 
     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -12,32 +10,21 @@
     sunt in culpa qui officia deserunt mollit anim id est laborum."</span>
 
     <div class="image">
+      <img src="..\assets\CentralImage.png">
+    </div>
 
-<img src="..\assets\CentralImage.png">
+    <div class="signIn">
+      <h2> Créez votre compte :</h2>
+      <button  (click)="subscriptionForm = true"> Let's GO</button>
+    </div>
+
+  </div>
+  <div class="listAndDetail" *ngIf="isConected && !subscriptionForm">
+    <app-moves-list></app-moves-list>
+  </div>
 </div>
 
-<div class="signIn">
-
-  <h2> Créez votre compte :</h2>
-
-  <button  (click)="subscriptionForm = true"> Let's GO</button>
-
-
-</div>
-</div>
-<div class="listAndDetail" *ngIf="isConected && !subscriptionForm">
-
- 
-  
-  <app-moves-list></app-moves-list>
-    
-</div>
-
-
-</div>
 <div class="subscribeForm" *ngIf="subscriptionForm">
-
-
   <h1 class="register">Informations de connexion</h1>
 
   <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" >
@@ -77,6 +64,7 @@
     <form class="UserInformationForm">
      
       <div class="useravatar">
+      
     <div class="form-group">
       <label for="inputPseudo">Pseudo : </label>
       <input type="text" class="form-control-midleSize" id="inputPseudo" placeholder=" Ex : ChessGodess">
@@ -129,6 +117,5 @@
     </div>
   </div>
 </form>
-
 
 </div>

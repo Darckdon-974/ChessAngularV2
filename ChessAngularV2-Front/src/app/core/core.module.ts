@@ -59,9 +59,6 @@ import { ReactiveFormsModule } from '@angular/forms';
         AppRoutingModule,
         MatDialogModule,
         MoveModule,
-        ReactiveFormsModule
-        
-
-    ]
+        ReactiveFormsModule,
 })
 export class CoreModule { }
