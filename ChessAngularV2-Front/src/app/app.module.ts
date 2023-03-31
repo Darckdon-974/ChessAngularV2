@@ -19,7 +19,6 @@ import { AuthInterceptor } from './core/interceptor/auth.interceptor';
   imports: [
     BrowserModule,
     MatDialogModule,
-    ReactiveFormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,

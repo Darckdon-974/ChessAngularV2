@@ -34,6 +34,6 @@ export class AuthService {
     }
 
     register(username: string | null, password: string | null) {
-        return this.http.post(environment.backendUrl + '/user', {username, password});
+        return this.http.post<{username: string, password: string, id: number}>(environment.backendUrl + '/user', {username, password});
     }
 }
