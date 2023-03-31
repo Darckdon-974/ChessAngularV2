@@ -42,9 +42,6 @@
 
 [![ChessWord app][product-screenshot]](/Documentation/images/app.png)
 
-This is an application about chess, build with [Angular CLI](https://github.com/angular/angular) and Angular material for angular ui. 
-We use a specific architecture for angular (look at [Documentation](/Documentation/Folder_Architecture_front/Folder_Architecture.PNG)). 
-In this project, we will build an application with Angular and the best configuration for Angular framework.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -57,10 +54,6 @@ This application was built with :
 * [![Material][material.angular.io]][AnuglarMaterial-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -77,16 +70,19 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-1. Clone the repo
-   ```sh
-   git clone https://github.com/Darckdon-974/ChessAngularV2.git
-   ```
-2. Install NPM packages
+1. Install NPM packages
    ```sh
    npm install
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Running the app
+
+```sh
+# development
+$ npm run start
+```
 
 <!-- CONTACT -->
 ## Contact
@@ -96,7 +92,6 @@ ODOUX Hugo - [@Darckdon](Darckdon#1955)
 Project Link: [@ChessWorld](https://github.com/Darckdon-974/ChessAngularV2.git)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
