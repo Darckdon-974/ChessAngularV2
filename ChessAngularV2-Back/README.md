@@ -34,10 +34,18 @@
     <li>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
+      </ul>
+    </li>
+    <li>
+      <ul>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#contact">Contact</a></li>
+    <li>
+      <ul>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </li>
   </ol>
 </details>
 
