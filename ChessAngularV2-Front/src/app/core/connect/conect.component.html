@@ -7,16 +7,12 @@
 
 
 <div class="login">
-
-       
-        <input class="loginFlield" type="text" id="username" name="username" placeholder=" Username">
-
-    
-
-        <input class="loginFlield" type="password" id="pass" name="password" placeholder=" Password"
-               minlength="8" required>
-    
-    <button class="button" type="submit" (click)="isConected()">GO</button>
+    <form [formGroup]="loginForm" class="login">
+        <input class="loginFlield" type="text" id="username" name="username" placeholder=" Username" formControlName="username">
+        <input class="loginFlield" type="password" id="pass" name="password" placeholder=" Password" formControlName="password"
+            minlength="4" required>
+        <button class="button" type="submit" (click)="isConected()">GO</button>
+    </form>
 </div>
 <div class="content"> 
     <span class="text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, 

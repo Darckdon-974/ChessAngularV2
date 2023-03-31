@@ -9,12 +9,11 @@ export class AuthService {
         private http: HttpClient,
     ) {}
 
-    login(username: string, password: string) {
+    login(username: string | null, password: string | null) {
         return this.http.post<{access_token: string}>(environment.backendUrl + '/auth', {username, password})
-        .subscribe(response => this.setSession(response.access_token))
     }
 
-    private setSession(authToken: string) {
+    setSession(authToken: string) {
         localStorage.setItem('expires_at', (Date.now() + 60 * 60 * 1000).toString());
         localStorage.setItem('id_token', authToken);
     }
