@@ -30,6 +30,7 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
+    li><a href="#running-the-app">Running the app</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -57,8 +58,6 @@ This application was built with :
 
 <!-- GETTING STARTED -->
 ## Getting Started
-
-To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
