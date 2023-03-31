@@ -1,0 +1,120 @@
+<div class="Welcolm">
+  <div *ngIf="!isConected && !subscriptionForm">  
+    <span class="textContent">"Lorem ipsum dolor sit amet, 
+    consectetur adipiscing elit, 
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </span>
+    <span class="textContent">
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+    Excepteur sint occaecat cupidatat non proident, 
+    sunt in culpa qui officia deserunt mollit anim id est laborum."</span>
+
+    <div class="image">
+      <img src="..\assets\CentralImage.png">
+    </div>
+
+    <div class="signIn">
+      <h2> Créez votre compte :</h2>
+      <button  (click)="subscriptionForm = true"> Let's GO</button>
+    </div>
+
+  </div>
+  <div class="listAndDetail" *ngIf="isConected && !subscriptionForm">
+    <app-moves-list></app-moves-list>
+  </div>
+</div>
+
+<div class="subscribeForm" *ngIf="subscriptionForm">
+  <h1 class="register">Informations de connexion</h1>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" >
+    <div class="RegistrationForm">
+      <div class="form-group">
+        <label>Username (Email) : </label>
+        <input type="text" formControlName="email" class="form-control-midleSize" [ngClass]="{ 'is-invalid': submitted && f['email'].errors }" />
+        <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+            <div *ngIf="f['email'].errors['required']">Email is required</div>
+            <div *ngIf="f['email'].errors['email']">Email must be a valid email address</div>
+        </div>
+      </div>
+
+      <div class="form-group col">
+          <label>Password : </label>
+          <input type="password" formControlName="password" class="form-control-midleSize" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }" />
+          <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+              <div *ngIf="f['password'].errors['required']">Password is required</div>
+              <div *ngIf="f['password'].errors['minlength']">Password must be at least 6 characters</div>
+          </div>
+      </div>
+
+      <div class="form-group col">
+        <label>Confirm Password : </label>
+        <input type="password" formControlName="confirmPassword" class="form-control-midleSize" [ngClass]="{ 'is-invalid': submitted && f['confirmPassword'].errors }" />
+        <div *ngIf="submitted && f['confirmPassword'].errors" class="invalid-feedback">
+            <div *ngIf="f['confirmPassword'].errors['required']">Confirm Password is required</div>
+            <div *ngIf="f['confirmPassword'].errors['mustMatch']">Passwords must match</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="separator">
+      <span >------------------------------------------------------------------------------------------------------------</span>
+    </div>
+
+    <h1 class="register">Créez votre profil</h1>
+    <form class="UserInformationForm">
+      
+      <div class="useravatar">
+        <div class="form-group">
+          <label for="inputPseudo">Pseudo : </label>
+          <input type="text" class="form-control-midleSize" id="inputPseudo" placeholder=" Ex : ChessGodess">
+        </div>
+
+        <div class="form-group">
+          <label for="exampleFormControlFile1">Photo de profil : </label>
+          <input type="file" class="form-control-midleSize" id="exampleFormControlFile1">
+        </div>
+      </div>
+
+      <div class="useravatar">
+        <div class="form-group">
+          <label for="inputState">Pays : </label>
+          <select class="form-control-midleSize" id="inputState">
+            <option selected>France...</option>
+            <option> Allemagne</option>
+            <option> Japon</option>
+            <option> Inde</option>
+            <option> Etats-Unis</option>
+            <option> Italie</option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-6">
+          <label for="inputLevel">Niveau : </label>
+          <select class="form-control-midleSize" id="inputLevel">
+            <option> Débutant</option>
+            <option> Intermédiaire 1</option>
+            <option> Intermédiaire 2</option>
+            <option> Intermédiaire 3</option>
+            <option> Expert</option>
+            <option> Champion</option>
+          </select>
+        </div>
+      </div>
+    </form>
+
+    <div class="separator">
+      <span >-----------------------------------------------</span>
+    </div>
+
+    <div class="form-group form-check">
+      <input type="checkbox" formControlName="acceptTerms" id="acceptTerms" class="form-check-input" [ngClass]="{ 'is-invalid': submitted && f['acceptTerms'].errors }" />
+      <label for="acceptTerms" class="form-check-label">En cochant cette case, j'accepte les <a href="https://fr.wikipedia.org/wiki/Conditions_générales_d%27utilisation#:~:text=Les%20conditions%20générales%20d%27utilisation,un%20service%20et%20ses%20utilisateurs.">Conditions générales d'utilisation#</a></label>
+      <div *ngIf="submitted && f['acceptTerms'].errors" class="invalid-feedback">L'acceptation des CGU est obligatoires</div>
+
+      <div class="text-center">
+        <button class="form-group-option">Register</button>
+        <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>
+      </div>
+    </div>
+  </form>
+</div>

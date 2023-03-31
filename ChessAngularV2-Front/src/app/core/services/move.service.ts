@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import {  Observable, of } from 'rxjs';
-import { Move } from '../../../../../shared/models/MoveModel';
-import { MessageService } from './message.service';
+import {  Observable } from 'rxjs';
+import { Move } from '../../../../../shared/interfaces/move.interface';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
@@ -11,14 +11,13 @@ import { MessageService } from './message.service';
 export class MoveService {
 
   // URL to Web api
-  private movesUrl = 'api/moves';
+  private movesUrl = `${environment.backendUrl}/move`;
   httpOtions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   }
 
   constructor(
     private http: HttpClient,
-    private messageService: MessageService,
   ) { }
 
   // Get moves from the database
@@ -33,7 +32,7 @@ export class MoveService {
 
   // Put move from the database
   updateMove(move : Move) : Observable<Move>{
-    return this.http.put<Move>(this.movesUrl, move, this.httpOtions);
+    return this.http.patch<Move>(this.movesUrl + '/' + move.id, move, this.httpOtions);
   }
 
   // DELETE move from the database

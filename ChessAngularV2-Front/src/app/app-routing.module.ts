@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './core/guards/auth.guard';
 import { LoggedInLayoutComponent } from './core/logged-in-layout/logged-in-layout.component';
 
 const routes: Routes = [
   {
     path: '',
-    runGuardsAndResolvers: 'always',
     component:LoggedInLayoutComponent,
+    // the Guard are implemented but I don't see the utility for one route here
+    // canActivate: [AuthGuard],
     children : [
       {
         path: '', 
@@ -15,12 +17,10 @@ const routes: Routes = [
       },
       {
         path: 'home',
-        loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule),
+        loadChildren: () => import('./core/home/home.module').then(m => m.HomeModule),
       },
-      {
-        path: 'list',
-        loadChildren: () => import('./modules/move/move.module').then(m =>m.MoveModule)
-      },
+
+      
     ]
   },
 ];

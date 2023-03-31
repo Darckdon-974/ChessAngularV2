@@ -68,6 +68,9 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "proxyConfig": "src/app/proxy.conf.json"
+          },
           "configurations": {
             "production": {
               "browserTarget": "chessAngularV2:build:production"

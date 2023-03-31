@@ -1,0 +1,142 @@
+.Welcolm{
+position: absolute;
+width:  1050px;
+height: 800px;
+left: 352px;
+top: 296px;
+padding-left: 3rem;
+
+background: rgba(52, 69, 112, 0.62);
+mix-blend-mode: normal;
+border: 1px solid #000000;
+border-radius: 50px;
+}
+.subscribeForm{
+    position: absolute;
+    width:  1050px;
+    height: 800px;
+    left: 352px;
+    top: 296px;
+    padding-left: 3rem;
+    
+    background: #F4F1FB;
+    mix-blend-mode: normal;
+    border: 3px solid #251919;
+    border-radius: 50px;
+    text-align: center;
+    }
+
+
+.textContent{
+    font-style: italic;
+    color: white;
+    text-align: center;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5%;
+        margin-left: 3rem;
+        margin-right: 3rem;
+        
+}
+img{
+    border-radius: 100px;
+    position: relative;
+    left: 70px;
+    top: 40px;
+    border-radius: 50px;
+
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+}
+.listAndDetail{
+    width:  998px;
+}
+
+.conectedWelcolm{
+    position: absolute;
+    width:  1050px;
+    height: 800px;
+    left: 352px;
+    top: 296px;
+    padding-left: 3rem;
+    
+    background: rgba(52, 69, 112, 0.62);
+    mix-blend-mode: normal;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    }
+
+    .signIn{
+        position: relative;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin-top: 80px;     
+    }
+
+    button{
+        width: 80px;
+        height: 80px;
+        
+        background: #09374a;
+        border: 1px solid #000000;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 90px;
+        color: white;
+    }
+    .separator{
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        
+    }
+
+    .register{
+        font-family:'corsiva';
+        font-weight: 800;
+        font-size: 46px;
+        line-height: 53px;
+        /* identical to box height */
+        text-align: center;
+        color: #1c0766;
+margin-bottom: 3rem;
+margin-top: 2rem;
+    }
+    .UserInformationForm{
+        display: flex;
+        justify-content: space-around;
+        flex-flow: column;
+    }
+    .RegistrationForm{
+     
+        display: flex;
+        justify-content: space-around;
+         flex-flow: row;
+    }
+
+    .form-control-midleSize{
+        border-radius: 15px;
+        padding: 5px;
+        width: 12rem;
+        height: 2rem;
+    }
+    .useravatar{
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+        margin-bottom: 1rem;
+    }
+
+
+    label{
+        font-size: 20px;
+    }
+ .form-group-option{
+    margin-right: 2rem;
+ }
+
+
+   

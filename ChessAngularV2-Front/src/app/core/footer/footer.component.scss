@@ -1,0 +1,40 @@
+.footer{
+    
+    position: relative;
+    top: 900px;
+    width: 1450px;
+    height: 100px;
+    left: 0px;
+    margin-top: 15rem;
+    
+    background: rgba(85, 96, 154, 0.55);
+    border-bottom: 1px solid #000000;
+    border-radius: 15px;
+}
+.links{
+    
+    display: flex;
+    flex-flow: row;
+    color: white;
+}
+.liste{
+    margin-left: 35%;
+}
+img{
+   
+width: 48px;
+
+border-radius: 60%;
+margin-right: 15px;
+}
+.brand{
+    position: absolute;
+    top: 40%;
+left: 30px;
+    display: flex;
+    flex-flow: row;
+}
+
+ul{
+    margin-left: 50px;
+}
