@@ -17,6 +17,7 @@ import { MoveModule } from './moves-list-details/move.module';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './interceptor/auth.interceptor';
 import { AuthService } from './services/auth.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -58,6 +59,7 @@ import { AuthService } from './services/auth.service';
         AppRoutingModule,
         MatDialogModule,
         MoveModule,
+        ReactiveFormsModule
         
 
     ]

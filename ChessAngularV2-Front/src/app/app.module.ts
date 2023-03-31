@@ -9,7 +9,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { InMemoryDataService } from './in-memory-data.service';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import { MatDialogModule } from '@angular/material/dialog';
@@ -23,6 +23,7 @@ import { AuthInterceptor } from './core/interceptor/auth.interceptor';
   imports: [
     BrowserModule,
     MatDialogModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
