@@ -1,6 +1,6 @@
-<div [ngClass]="isConected ? 'conectedWelcolm' : 'unconectedWelcolm'">
+<div class="Welcolm">
 
-    <div *ngIf="!isConected">
+    <div *ngIf="!isConected && !subscriptionForm">
     
     <span class="textContent">"Lorem ipsum dolor sit amet, 
     consectetur adipiscing elit, 
@@ -20,16 +20,118 @@
 
   <h2> Créez votre compte :</h2>
 
-  <button> Let's GO</button>
+  <button  (click)="subscriptionForm = true"> Let's GO</button>
 
 
 </div>
 </div>
-<div class="listAndDetail" *ngIf="isConected">
+<div class="listAndDetail" *ngIf="isConected && !subscriptionForm">
 
  
   
   <app-moves-list></app-moves-list>
     
 </div>
+
+
+</div>
+<div class="subscribeForm" *ngIf="subscriptionForm">
+
+
+  <h1 class="register">Informations de connexion</h1>
+
+  <form class="RegistrationForm">
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Email : </label>
+        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+      </div>
+      
+      <div class="form-group col-md-6">
+        <label for="inputPassword">Password : </label>
+        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPasswordToConfirm">Confirme Password : </label>
+        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+      </div>
+  </form>
+    <div class="separator">
+    <span >------------------------------------------------------------------------------------------------------------</span>
+  </div>
+
+  <h1 class="register">Créez votre profil</h1>
+    <form class="UserInformationForm">
+
+    <div class="form-group">
+      <label for="inputPseudo">Choisissez un pseudo : </label>
+      <input type="text" class="form-control" id="inputPseudo" placeholder=" Ex : ChessGodess">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleFormControlFile1">Ajoutez une photo de profil : </label>
+      <input type="file" class="form-control-file" id="exampleFormControlFile1">
+    </div>
+
+
+    
+      <div class="form-group col-md-6">
+        <label for="inputLevel">Votre niveau : </label>
+        <select class="form-control" id="inputLevel">
+          <option selected>France...</option>
+          <option>Débutant</option>
+          <option>Intermédiaire 1</option>
+          <option>Intermédiaire 2</option>
+          <option>Intermédiaire 3</option>
+          <option>Expert</option>
+          <option>Champion</option>
+        </select>
+      </div>
+
+ 
+
+      <div class="form-group">
+        <label for="inputState">Votre Pays :</label>
+        <select class="form-control" id="inputState">
+          <option selected>France...</option>
+          <option>Allemagne</option>
+          <option>Japon</option>
+          <option>Inde</option>
+          <option>Etats-Unis</option>
+          <option>Italie</option>
+        </select>
+      </div>
+    
+  
+      <div class="form-group">
+        <label for="exampleFormControlSelect2">Choisisez vos options : </label>
+        <select multiple class="form-control" id="exampleFormControlSelect2">
+          <option><input class="form-check-input" type="checkbox">Je souhaite machin</option>
+          <option><input class="form-check-input" type="checkbox">Je souhaite truc</option>
+          <option><input class="form-check-input" type="checkbox">Je souhaite bidule</option>
+          <option><input class="form-check-input" type="checkbox">Je souhaite chouette</option>
+        </select>
+        
+       
+      </div>
+    
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck">
+        <label class="form-check-label" for="gridCheck">
+           En cochant cette case, j'accepte les <a href="https://fr.wikipedia.org/wiki/Conditions_générales_d%27utilisation#:~:text=Les%20conditions%20générales%20d%27utilisation,un%20service%20et%20ses%20utilisateurs.">Conditions générales d'utilisation#</a>
+        </label>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="subscriptionForm = false">Sign in</button>
+  </form>
+
+  
+
+ 
+
+  <form>
+   
+  </form>
+
+
 </div>

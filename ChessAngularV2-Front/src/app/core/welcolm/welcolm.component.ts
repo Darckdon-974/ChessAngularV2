@@ -12,6 +12,8 @@ export class WelcolmComponent implements OnInit {
 
  @Input()
   public isConected!: boolean;
+
+  public subscriptionForm = false;
  
 
   constructor(
