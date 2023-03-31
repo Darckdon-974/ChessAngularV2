@@ -60,6 +60,5 @@ import { ReactiveFormsModule } from '@angular/forms';
         MatDialogModule,
         MoveModule,
         ReactiveFormsModule,
-    ]
 })
 export class CoreModule { }

@@ -8,8 +8,6 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { FormsModule } from '@angular/forms';
-
-
 import { MatDialogModule } from '@angular/material/dialog';
 import { AuthInterceptor } from './core/interceptor/auth.interceptor';
 
@@ -21,6 +19,7 @@ import { AuthInterceptor } from './core/interceptor/auth.interceptor';
   imports: [
     BrowserModule,
     MatDialogModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
