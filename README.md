@@ -26,7 +26,6 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
@@ -56,11 +55,9 @@ This application was built with :
 
 * [![Angular][Angular.io]][Angular-url]
 * [![Material][material.angular.io]][AnuglarMaterial-url]
+* [![Next][Next.js]][Next-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 
 
 <!-- GETTING STARTED -->
@@ -68,31 +65,31 @@ This application was built with :
 
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
 ### Installation
 
 1. Clone the repo
    ```sh
    git clone https://github.com/Darckdon-974/ChessAngularV2.git
    ```
-2. Install NPM packages
+2. For the front configuration
    ```sh
-   npm install
+   Go in repository ChessAngularV2-Front
+   ```
+3. For the Back configuration
+   ```sh
+   Go in repository ChessAngularV2-Back
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+To register you before you do your first connection, CLICK on Let's GO in the bottom of the welcome page.
+And then this part will display.
+
+[![ChessWord app][register-screenshot]](/ChessAngularV2-Front/Documentation/images/register.PNG)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -114,4 +111,7 @@ Project Link: [@ChessWorld](https://github.com/Darckdon-974/ChessAngularV2.git)
 [material.angular.io]: https://img.shields.io/badge/Material-DD0031?style=for-the-badge&logo=angular&logoColor=white
 [AnuglarMaterial-url]: https://material.angular.io/
 [product-screenshot]: /ChessAngularV2-Front/Documentation/images/app.png
+[register-screenshot]: /ChessAngularV2-Front/Documentation/images/register.PNG
+[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+[Next-url]: https://nextjs.org/
 https://github.com/Darckdon-974/ChessAngularV2.git
