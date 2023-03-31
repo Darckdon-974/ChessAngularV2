@@ -1,0 +1,50 @@
+<div class="connect">
+
+    <div *ngIf="!itIsConnected">
+
+   <div> <img class="userLogin" src="..\assets\user.png ">
+</div>
+
+
+<div class="login">
+    <form [formGroup]="loginForm" class="login">
+        <input class="loginFlield" type="text" id="username" name="username" placeholder=" Username" formControlName="username">
+        <input class="loginFlield" type="password" id="pass" name="password" placeholder=" Password" formControlName="password"
+            minlength="4" required>
+        <button class="button" type="submit" (click)="isConected()">GO</button>
+    </form>
+</div>
+<div class="content"> 
+    <span class="text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, 
+        quis nostrud exercitation ullamco laboris nisi ut aliquip 
+        ex ea commodo consequat."
+</span>
+</div>
+
+</div>
+
+<div class="connected" *ngIf="itIsConnected">
+    <div> <img class="userLogin" src="..\assets\userConected.png "> 
+        <h1 class="userName"> Hugo   <button class="disconect" type="submit" (click)="isUnConected()">Disconect </button></h1>
+        <div class="content">
+
+            <div class="itemsToCome"><span class="lorem">Lorem Ipsum</span></div>
+            <div class="itemsToCome"><span class="lorem">Lorem Ipsum</span></div>
+            <div class="itemsToCome"><span class="lorem">Lorem Ipsum</span></div>
+        
+            <h2 class="playTitle">PLAY</h2>
+        <div class="GoPlay">
+            
+
+            <button class="goPlayToChess"  onclick="window.location.href = 'https:///www.chess.com/fr/play/computer';">
+                <img class="img" src="..\assets\GoToChess.png " >
+
+            </button>
+
+
+        </div>
+    </div>
+</div>
+</div>
