@@ -7,6 +7,7 @@ const routes: Routes = [
   {
     path: '',
     component:LoggedInLayoutComponent,
+    // the Guard are implemented but I don't see the utility for one route here
     // canActivate: [AuthGuard],
     children : [
       {

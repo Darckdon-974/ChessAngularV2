@@ -42,9 +42,9 @@
 
 [![ChessWord app][product-screenshot]](/ChessAngularV2-Front/Documentation/images/app.png)
 
-This is an application about chess, build with [Angular CLI](https://github.com/angular/angular) and Angular material for angular ui. 
-We use a specific architecture for angular (look at [Documentation](/Documentation/Folder_Architecture_front/Folder_Architecture.PNG)). 
-In this project, we will build an application with Angular and the best configuration for Angular framework.
+This is an application about chess, build with [Angular CLI](https://github.com/angular/angular) for the front-end and 
+[NestJs](https://github.com/nestjs/nest) for the front-end
+In this project, we will build an application with Angular/NestJs with the best configuration for Angular framework.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

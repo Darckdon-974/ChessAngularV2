@@ -84,6 +84,11 @@ This is an example of how to list things you need to use the software and how to
     ```sh
     $ npm run typeorm-d migration:run
     ```
+5. Insert data into your database
+    ```sh
+    $ go in ChessAngularv2-Back > data > data.sql.txt
+    $ Copy and paste this request sql in your database
+    ```
 
 ## Running the app
 

@@ -44,13 +44,7 @@ import { ReactiveFormsModule } from '@angular/forms';
             provide: MAT_DIALOG_DATA,
             useValue: []
         },
-        {
-            provide: HTTP_INTERCEPTORS,
-            useClass: AuthInterceptor,
-            multi: true
-          }
-
-        ],
+    ],
     imports: [
         CommonModule,
         MatToolbarModule,
