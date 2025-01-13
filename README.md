@@ -43,7 +43,7 @@
 [![ChessWord app][product-screenshot]](/ChessAngularV2-Front/Documentation/images/app.png)
 
 This is an application about chess, build with [Angular CLI](https://github.com/angular/angular) for the front-end and 
-[NestJs](https://github.com/nestjs/nest) for the front-end
+[NestJs](https://github.com/nestjs/nest) for the back-end
 In this project, we will build an application with Angular/NestJs with the best configuration for Angular framework.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
